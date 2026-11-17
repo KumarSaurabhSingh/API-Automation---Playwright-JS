@@ -1,0 +1,42 @@
+{
+  "name": "playwright-api-automation",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Production-grade API automation framework built on Playwright and JavaScript",
+  "keywords": [
+    "playwright",
+    "api-testing",
+    "automation",
+    "javascript",
+    "contract-testing"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "test": "playwright test",
+    "test:smoke": "playwright test --grep @smoke",
+    "test:regression": "playwright test --grep @regression",
+    "test:security": "playwright test --grep @security",
+    "test:contract": "playwright test --grep @contract",
+    "test:auth": "playwright test tests/auth",
+    "test:products": "playwright test tests/products",
+    "test:users": "playwright test tests/users",
+    "test:posts": "playwright test tests/posts",
+    "test:carts": "playwright test tests/carts",
+    "test:contract-suite": "playwright test tests/contract",
+    "test:e2e": "playwright test tests/e2e",
+    "test:serial": "playwright test --workers=1",
+    "test:ci": "playwright test --workers=2",
+    "health": "node src/setup/health-check.js",
+    "report": "playwright show-report reports/html",
+    "clean": "node scripts/clean.js"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.65.1",
+    "ajv": "^8.17.1",
+    "ajv-formats": "^3.0.1",
+    "dotenv": "^16.4.7"
+  }
+}

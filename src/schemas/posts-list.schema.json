@@ -1,0 +1,17 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schemas.playwright-api-automation.local/posts-list.schema.json",
+  "title": "PostsList",
+  "type": "object",
+  "required": ["posts", "total", "skip", "limit"],
+  "properties": {
+    "posts": {
+      "type": "array",
+      "items": { "$ref": "https://schemas.playwright-api-automation.local/post.schema.json" }
+    },
+    "total": { "type": "integer", "minimum": 0 },
+    "skip": { "type": "integer", "minimum": 0 },
+    "limit": { "type": "integer", "minimum": 0 }
+  },
+  "additionalProperties": true
+}

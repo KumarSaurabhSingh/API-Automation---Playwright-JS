@@ -1,0 +1,19 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schemas.playwright-api-automation.local/cart-product.schema.json",
+  "title": "CartProduct",
+  "type": "object",
+  "required": ["id", "title", "price", "quantity", "total", "thumbnail"],
+  "properties": {
+    "id": { "type": "integer", "minimum": 1 },
+    "title": { "type": "string", "minLength": 1 },
+    "price": { "type": "number", "minimum": 0 },
+    "quantity": { "type": "integer", "minimum": 1 },
+    "total": { "type": "number", "minimum": 0 },
+    "discountPercentage": { "type": "number", "minimum": 0 },
+    "discountedPrice": { "type": "number", "minimum": 0 },
+    "discountedTotal": { "type": "number", "minimum": 0 },
+    "thumbnail": { "type": "string" }
+  },
+  "additionalProperties": true
+}

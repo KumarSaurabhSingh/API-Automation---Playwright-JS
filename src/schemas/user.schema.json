@@ -1,0 +1,58 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schemas.playwright-api-automation.local/user.schema.json",
+  "title": "User",
+  "type": "object",
+  "required": [
+    "id",
+    "firstName",
+    "lastName",
+    "age",
+    "gender",
+    "email",
+    "phone",
+    "username",
+    "image",
+    "hair",
+    "address"
+  ],
+  "properties": {
+    "id": { "type": "integer", "minimum": 1 },
+    "firstName": { "type": "string", "minLength": 1 },
+    "lastName": { "type": "string", "minLength": 1 },
+    "maidenName": { "type": "string" },
+    "age": { "type": "integer", "minimum": 0 },
+    "gender": { "type": "string" },
+    "email": { "type": "string", "format": "email" },
+    "phone": { "type": "string" },
+    "username": { "type": "string", "minLength": 1 },
+    "password": { "type": "string" },
+    "birthDate": { "type": "string" },
+    "image": { "type": "string" },
+    "bloodGroup": { "type": "string" },
+    "height": { "type": "number" },
+    "weight": { "type": "number" },
+    "eyeColor": { "type": "string" },
+    "hair": {
+      "type": "object",
+      "required": ["color", "type"],
+      "properties": {
+        "color": { "type": "string" },
+        "type": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "ip": { "type": "string" },
+    "address": { "type": "object" },
+    "macAddress": { "type": "string" },
+    "university": { "type": "string" },
+    "bank": { "type": "object" },
+    "company": { "type": "object" },
+    "ein": { "type": "string" },
+    "ssn": { "type": "string" },
+    "userAgent": { "type": "string" },
+    "crypto": { "type": "object" },
+    "role": { "type": "string" }
+  },
+  "additionalProperties": true
+}

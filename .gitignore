@@ -1,0 +1,22 @@
+node_modules/
+.env
+.DS_Store
+
+# Playwright artifacts
+reports/
+test-results/
+playwright-report/
+blob-report/
+.playwright/
+
+# Runtime logs
+logs/
+*.log
+
+# Editor / IDE
+.idea/
+.vscode/
+*.swp
+
+# OS
+Thumbs.db

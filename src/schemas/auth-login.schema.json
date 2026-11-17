@@ -1,0 +1,29 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://schemas.playwright-api-automation.local/auth-login.schema.json",
+  "title": "AuthLogin",
+  "type": "object",
+  "required": [
+    "accessToken",
+    "refreshToken",
+    "id",
+    "username",
+    "email",
+    "firstName",
+    "lastName",
+    "gender",
+    "image"
+  ],
+  "properties": {
+    "accessToken": { "type": "string", "minLength": 10 },
+    "refreshToken": { "type": "string", "minLength": 10 },
+    "id": { "type": "integer", "minimum": 1 },
+    "username": { "type": "string", "minLength": 1 },
+    "email": { "type": "string", "format": "email" },
+    "firstName": { "type": "string", "minLength": 1 },
+    "lastName": { "type": "string", "minLength": 1 },
+    "gender": { "type": "string" },
+    "image": { "type": "string" }
+  },
+  "additionalProperties": true
+}
